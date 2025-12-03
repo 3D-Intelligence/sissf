@@ -1,0 +1,195 @@
+{
+    "format": "sceneState",
+    "scene": {
+        "id": "demo-scene",
+        "version": "scene@0.0.1",
+        "up": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+        },
+        "front": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -1.0
+        },
+        "unit": 1.0,
+        "asset_source": [],
+        "objects": [
+            {
+                "id": "sofa-0",
+                "type": "ModelInstance",
+                "model_id": "holodeck.sofa_example",
+                "transform": {
+                    "rotation": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "translation": [
+                        2.5,
+                        0.3,
+                        3.5
+                    ],
+                    "scale": [
+                        4,
+                        0.6,
+                        1.6
+                    ],
+                    "matrix": [
+                        4.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.6,
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.6,
+                        0.0,
+                        2.5,
+                        0.3,
+                        3.5,
+                        1.0
+                    ]
+                },
+                "parent_id": "floor_living_room",
+                "metadata": {},
+                "asset_file_location": null
+            }
+        ],
+        "cameras": [
+            {
+                "up": {
+                    "x": 0.0,
+                    "y": 1.0,
+                    "z": 0.0
+                },
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "target": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "is_ortho": false,
+                "name": "current"
+            }
+        ],
+        "selected": [],
+        "metadata": {}
+    },
+    "arch": {
+        "id": "demo-arch",
+        "version": "arch@0.0.1",
+        "up": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+        },
+        "front": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -1.0
+        },
+        "scale_to_meters": 1.0,
+        "defaults": {
+            "Wall": {
+                "depth": 0.1,
+                "extra_height": 0.0
+            },
+            "Ceiling": {
+                "depth": 0.05
+            },
+            "Floor": {
+                "depth": 0.05
+            },
+            "Ground": {
+                "depth": 0.05
+            }
+        },
+        "rooms": [
+            {
+                "id": "living_room",
+                "type": "Room",
+                "wall_ids": [],
+                "floor": {
+                    "id": "floor_living_room",
+                    "type": "Floor",
+                    "points": [
+                        {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        {
+                            "x": 5.0,
+                            "y": 0.0,
+                            "z": 4.0
+                        },
+                        {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 4.0
+                        }
+                    ],
+                    "depth": 0.05,
+                    "room_id": "living_room",
+                    "material": null,
+                    "material_file_location": null,
+                    "metadata": {}
+                },
+                "ceiling": null,
+                "metadata": {}
+            }
+        ],
+        "walls": [],
+        "floors": [
+            {
+                "id": "floor_living_room",
+                "type": "Floor",
+                "points": [
+                    {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    {
+                        "x": 5.0,
+                        "y": 0.0,
+                        "z": 4.0
+                    },
+                    {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 4.0
+                    }
+                ],
+                "depth": 0.05,
+                "room_id": "living_room",
+                "material": null,
+                "material_file_location": null,
+                "metadata": {}
+            }
+        ],
+        "ceilings": [],
+        "metadata": {}
+    },
+    "scene_graph": {}
+}
