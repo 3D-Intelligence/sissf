@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Any, Dict, Optional, Protocol, Type
 
-from ..geometry import Transform
+from ..geometry import BBox3D, Transform
 from ..utils import dict_to_uuid
 
 # Registry for adapters
@@ -29,6 +29,7 @@ class ModelInstance:
     id: str
     model_id: str
     transform: Transform = field(default_factory=Transform)
+    bounding_box: Optional[BBox3D] = None
     parent_id: Optional[str] = None
     metadata: Dict[str, Any] = field(default_factory=dict)
     type: str = "ModelInstance"
@@ -51,6 +52,7 @@ class ModelInstance:
             "type": self.type,
             "model_id": self.model_id,
             "transform": self.transform.to_dict(),
+            "bounding_box": self.bounding_box.to_dict() if self.bounding_box else None,
             "parent_id": self.parent_id,
             "metadata": self.metadata,
             "asset_file_location": self.asset_file_location,
@@ -64,6 +66,9 @@ class ModelInstance:
             model_id=obj.get("model_id", ""),
             parent_id=obj.get("parent_id"),
             transform=Transform.from_dict(obj["transform"]),
+            bounding_box=(
+                BBox3D.from_dict(bbox) if (bbox := obj.get("bounding_box")) else None
+            ),
             metadata=obj.get("metadata", {}),
             asset_file_location=obj.get("asset_file_location"),
         )
